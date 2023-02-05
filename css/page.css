@@ -1,0 +1,317 @@
+.center {
+    text-align: right;
+  }
+  .center1 {
+    text-align: center;
+  }
+  a /* Liens par défaut (non survolés) */
+  {
+     text-decoration: none;
+     color: rgb(8, 8, 8);
+     font-style: italic;
+  }
+  a:hover /* Apparence au survol des liens */
+  {
+     text-decoration: underline;
+     color: green;
+  }
+  
+  .pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 0px 8px 0px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid rgb(9, 9, 9);
+    margin: 0 1px 3px;
+    
+  }
+a:visited /* Quand le visiteur a déjà vu la page concernée */
+{
+    color: rgb(6, 0, 0); /* Appliquer une couleur grise */
+}
+
+.current {
+    background-color: rgb(49, 179, 179);
+}
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+html{/*boutton haut de page*/
+  scroll-behavior: smooth;
+}
+.top{/*boutton haut de page*/
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 10px;
+  right: 20px;
+  margin: 0 0 40px;
+  background: url(/photo/ciel.jpg);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  border-radius: 20px;
+}
+.top.voirBt{/*boutton haut de page*/
+  visibility: visible;
+}
+
+ 
+
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+#text:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+#text:visited {
+  color: rgb(254, 254, 254);
+  background-color: transparent;
+  text-decoration: none;
+}
+#text:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+#text:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+.tooltip {/*infos bulles*/
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* {Zoom
+  box-sizing: border-box;
+}*/
+
+.zoom {
+  padding: 0px;
+  transition: transform .2s;
+  width: 300px;
+  height: 330px;
+  margin: 3px;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5); 
+}
+
+#pageContent1 {
+  padding: 100px 20px;
+  min-height: 100vh;
+  background-image: url(../photo/le_postillos.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#centre {
+  position: absolute;
+  left: 50px;
+  top: 150px;
+  right: 150px;
+}
+
+.content {
+  max-width: 2500px;
+  margin: auto;
+  background-image: url(/photo/ciel.jpg);  
+  padding: 10px;
+}
+
+
+
+
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 1000px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 1000px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img1{
+float: left;
+margin: 10px;
+padding: 0px;
+}
+
+div.polaroid {
+  float: left;
+  margin: 0px 10px 0px -10px;
+  padding: 7px 10px 0 10px;
+  width: 15%;
+  background-image: url(/photo/fond1.jpg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
+  text-align:center;
+  font-size: 0.75em;
+  border-radius: 15px;
+}
+div.polaroid1 {
+  float: right;
+  margin: 0px -10px 0px 10px;
+  padding: 7px 7px 0 7px;
+  width: 15%;
+  background-image: url(/photo/fond1.jpg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.75em;
+  border-radius: 15px;
+}
+div.polaroid2 {
+  float:left;
+  margin:100px -10px 0px 200px;
+  padding: 7px 7px 0 7px;
+  width: 15%;
+  background-image: url(/photo/fond1.jpg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.75em;
+  border-radius: 15px;
+}
+/*texte decoration soullignement*/
+div.a {
+  text-decoration-line: underline; /*soullignement simple*/
+  text-decoration-style: solid;
+}
+
+div.b {
+  text-decoration-line: underline;/*soullignement ondulé*/
+  text-decoration-style: wavy;
+}
+
+div.c {
+  text-decoration-line: underline;/*soullignement double*/
+  text-decoration-style: double;
+}
+
+div.d {
+  text-decoration-line: overline underline;/*soullignement texte entre deux ondulayions*/
+  text-decoration-style: wavy;
+}
+
